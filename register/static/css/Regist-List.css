@@ -1,0 +1,85 @@
+form{
+   display: flex;
+   flex-direction: column;
+}
+form li{
+   margin-top: 10px;
+   display: flex;
+   flex-direction: row;
+   font-size: 17px;
+   gap: 10px;
+   justify-content: center;
+   align-items: center;
+}
+input,select{
+   border: 2px solid black;
+   padding: 5px;
+   border-radius: 7px;
+   font-size: 20px;
+}
+input[type=text],input[type=sobrenome]{
+   width: 32vw;
+   height: 40px;
+}
+input[type=email],input[type=data_nascimento]{
+   width: 49vw;
+   height: 40px;
+}
+input[type=number]{
+   width: 33vw;
+   height: 40px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+label ul{
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   margin-left: 20px;
+}
+textarea{
+   border: 2px solid black;
+   border-radius: 7px;
+   font-size: 15px;
+   gap: 10px;
+}
+#space_beetw{
+   gap: 110px;
+}
+a,button{
+   color: white;
+   border: none;
+   text-decoration: none; 
+   background-color: aqua;
+   display:block;
+   width: 150px;
+   height: 40px;
+   border-radius: 7px;
+   cursor: pointer;
+   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+
+}
+a:visited{
+   color: black;
+}
+.button_Modify{
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   justify-content: center;
+   margin-top: 15px;
+}
+div a p{
+   font-size: 15px;
+   text-align: center;
+   margin-left: 0;
+}
+#But_Deletar{
+   background-color: red;
+}
+#but_Salvar{
+   background-color: rgb(13, 255, 13);
+}

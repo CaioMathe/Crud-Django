@@ -1,0 +1,71 @@
+<!doctype html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Style-Geral.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Lista.css' %}">
+    <title>Lista de Cadastro</title>
+</head>
+<body>
+    <div class='sidebar'>
+        <span ><h1>CUBO.</h1><h5>escolar</h5></span>
+        <div class='list_sidebar'>
+            
+            <ul>
+                <li>
+                    <p>Administrativo</p>
+                    <hr>
+                </li>
+                <li>
+                    <p >Cadastro</p>
+                </li>
+                <li>
+                    <p>Pessoal</p>
+                </li>
+                <li>
+                    <p>Aluno</p>
+                </li>
+            </ul>
+            <ul id="Fin_marg">
+                <li>
+                    <p>Financeiro</p>
+                    <hr>
+                </li>
+                <li>
+                    <p>Contas a pagar</p>
+                </li>
+                <li>
+                    <p>Lançamento</p>
+                </li>
+                <li>
+                    <p>Consulta</p>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="person_conteudo">
+        <div class='bar_person'>
+          
+        </div>
+
+        <div class='conteudo'>
+            <a id="new_reg" href="{% url 'create_register'%}">Novo Registro <h1>+</h1></a>
+            <ul class='list_registered'>
+                {% for cliente in clientes %}
+                <a href="{% url 'update_register' cliente.id %}">
+                <li>{{cliente.nome}}</li>
+                </a>
+                {% endfor %}
+            </ul>
+            
+           
+        </div>
+    </div>
+
+
+</body>
+</html>

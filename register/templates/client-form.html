@@ -1,0 +1,125 @@
+<!doctype html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          <link rel="stylesheet" href="{% static 'css/Regist-List.css' %}">
+          <link rel="stylesheet" href="{% static 'css/Style-Geral.css' %}">
+    <title>Criar novo Registro</title>
+</head>
+<body>
+
+    <div class='sidebar'>
+        <span ><h1>CUBO.</h1><h5>escolar</h5></span>
+        <div class='list_sidebar'>
+            
+            <ul>
+                <li>
+                    <p>Administrativo</p>
+                    <hr>
+                </li>
+                <li>
+                    <p >Cadastro</p>
+                </li>
+                <li>
+                    <p>Pessoal</p>
+                </li>
+                <li>
+                    <p>Aluno</p>
+                </li>
+            </ul>
+            <ul id="Fin_marg">
+                <li>
+                    <p>Financeiro</p>
+                    <hr>
+                </li>
+                <li>
+                    <p>Contas a pagar</p>
+                </li>
+                <li>
+                    <p>Lançamento</p>
+                </li>
+                <li>
+                    <p>Consulta</p>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="person_conteudo">
+        <div class='bar_person'>
+
+        </div>
+
+        <div class='conteudo'>
+            <h1>Cadastro de Pessoal Técnico</h1>
+            <hr>
+            <form method="post">
+                   {% csrf_token %}
+                <ol>
+                    <li>
+                        <label>Nome *</br>
+                           {{form.nome}}
+                        </label>
+                         <label>Sobrenome *</br>
+                           {{form.sobrenome}}
+                        </label>
+                    </li>
+                    <li>
+                        <label>Email *</br>
+                           {{form.email}}
+                        </label>
+                         <label>Data de Nascimento *</br>
+                           {{form.data_nascimento}}
+                        </label>
+                    </li>
+                    <li>
+                        <label>Celular *</br>
+                           {{form.celular}}
+                        </label>
+                         <label>Sexo</br>
+                           {{form.genero}}
+                        </label>
+                        <label id="leng-program">Linguagem que mais domína?</br>
+                            {{form.leg_prog}}
+                         </label>
+                    </li>
+                    <li id='space_beetw'>
+                        <label>
+                           {{form.trabalhou}}
+                           Primeiro Trabalho?
+                        </label>
+                        <label >
+                            Descreva suas Softskills</br>
+                            {{form.softskills}}
+                           
+                         </label>
+                    </li>
+
+
+                </ol>
+              <div class='button_Modify'>           
+                 {% if client %}
+                 <a id="But_Deletar" href="{% url 'delete_register' client.id %}"><p >Deletar</p></a>
+                 {% endif %}
+                 <a href="{% url 'list_registered'  %}"><p id="But_Cancelar">Cancelar</p></a> 
+                 <button id="but_Salvar" type="submit">Salvar</button>
+
+              </div>
+            </form>
+      
+                 
+                     
+        </div>
+    </div>
+
+
+
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+.list_registered{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.conteudo li{
+    width: 330px;
+    padding: 10px;
+    background-color: rgb(67, 103, 204);
+    border-radius: 5px;
+    color: white;
+    text-align:center;
+    margin-top: 10px;
+}
+#new_reg{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: baseline;
+    width: 240px;
+}
+a:link{
+    color: white;
+    text-decoration: none!important;
+    
+}
+.conteudo h1{
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 5px;
+    text-align: center;
+    
+}
